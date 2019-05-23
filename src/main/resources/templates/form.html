@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Spring boot file upload example</h1>
+<form method="post" action="/add" th:object="${actor}">
+    enctype="multipart/from-data">
+    name:<input type="text" th:field="*{name}"/>
+    real name : <input type="text" th:firld="*{realname}"/>
+    <input type="file" name="file"/>
+    <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
